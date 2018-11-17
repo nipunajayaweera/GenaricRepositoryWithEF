@@ -1,0 +1,27 @@
+﻿@model GenaricRepoWithEF.Models.HomeModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-5">
+        <h3>Blogs</h3>
+        <ul>
+            @foreach (var blog in Model.BlogsList)
+            {
+                <li> @blog.Url</li>
+            }
+        </ul>
+    </div>
+    <div class="col-md-5">
+        <h3>Posts</h3>
+        <ul>
+            @foreach (var post in Model.PostsList)
+            {
+                <li> @post.Title</li>
+            }
+        </ul>
+    </div>
+
+
+</div>
